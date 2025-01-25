@@ -16,7 +16,6 @@ public class ActualizarUsuario {
     private JButton cancelarBtn;
 
     public ActualizarUsuario() {
-
         actualizarBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -24,33 +23,25 @@ public class ActualizarUsuario {
                 String nuevoNombre = nuevoNombretxt.getText().trim();
                 String nuevoCorreo = nuevoCorreotxt.getText().trim();
                 String nuevaContrasena = new String(nuevaContrasenatxt.getPassword());
-
-                // Validar que todos los campos estén completos
                 if (correoBuscar.isEmpty() || nuevoNombre.isEmpty() || nuevoCorreo.isEmpty() || nuevaContrasena.isEmpty()) {
                     JOptionPane.showMessageDialog(ActualizarUsuarioP, "Por favor, llena todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
                 try {
-                    // Conectar a la base de datos y colección
                     MongoDatabase database = ConexionMongo.getDatabase();
                     MongoCollection<Document> collection = database.getCollection("RegistrosClientes");
-
-                    // Buscar usuario por correo
+                    //buscamos al cliente por su correo
                     Document buscar = new Document("correo", correoBuscar);
                     Document usuarioExistente = collection.find(buscar).first();
 
                     if (usuarioExistente != null) {
-                        // Crear el documento con los nuevos valores
                         Document nuevosDatos = new Document("nombre", nuevoNombre)
                                 .append("correo", nuevoCorreo)
                                 .append("contrasena", nuevaContrasena);
 
                         collection.updateOne(buscar, new Document("$set", nuevosDatos));
-
                         JOptionPane.showMessageDialog(ActualizarUsuarioP, "Cliente actualizado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-
-                        // Limpiar los campos
                         correoBuscartxt.setText("");
                         nuevoNombretxt.setText("");
                         nuevoCorreotxt.setText("");
@@ -66,9 +57,7 @@ public class ActualizarUsuario {
         });
         cancelarBtn.addActionListener(e -> {
             JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(ActualizarUsuarioP);
-            if (frameActual != null) {
-                frameActual.dispose();
-            }
+            frameActual.dispose();
             JFrame frameAdmin = new JFrame("Panel Administrador");
             PanelAdmin panelAdmin = new PanelAdmin();
             frameAdmin.setContentPane(panelAdmin.AdminCrud);

@@ -50,9 +50,7 @@ public class CrearUsuario {
 
         Cancelarbtn.addActionListener(e -> {
             JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(CrearUsuarioP);
-            if (frameActual != null) {
-                frameActual.dispose();
-            }
+            frameActual.dispose();
             JFrame frameAdmin = new JFrame("Panel Administrador");
             PanelAdmin panelAdmin = new PanelAdmin();
             frameAdmin.setContentPane(panelAdmin.AdminCrud);

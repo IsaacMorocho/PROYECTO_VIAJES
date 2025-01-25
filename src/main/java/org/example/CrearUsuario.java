@@ -51,7 +51,7 @@ public class CrearUsuario {
         Cancelarbtn.addActionListener(e -> {
             JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(CrearUsuarioP);
             if (frameActual != null) {
-                frameActual.dispose(); // Cierra la ventana actual
+                frameActual.dispose();
             }
             JFrame frameAdmin = new JFrame("Panel Administrador");
             PanelAdmin panelAdmin = new PanelAdmin();

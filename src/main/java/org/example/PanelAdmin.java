@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class PanelAdmin {
     private JButton crearUsuariosbtn;
-    private JButton actualizarInformacionDeUsuariosButton;
+    private JButton actualizarUsuariobtn;
     private JButton mostrarUsuariosButton;
     private JButton eliminarUsuariosButton;
     private JButton crearUnNuevoPaqueteButton;
@@ -32,6 +32,21 @@ public class PanelAdmin {
                 frame.setVisible(true);
                 SwingUtilities.getWindowAncestor(AdminCrud).dispose();
 
+            }
+        });
+
+        actualizarUsuariobtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("Actualizar Usuarios");
+                frame.setContentPane(new ActualizarUsuario().ActualizarUsuarioP);
+                frame.setLocationRelativeTo(null);
+                frame.setSize(800, 600);
+                frame.setPreferredSize(new Dimension(800, 600));
+                frame.pack();
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+                SwingUtilities.getWindowAncestor(AdminCrud).dispose();
             }
         });
     }

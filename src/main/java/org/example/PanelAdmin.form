@@ -101,7 +101,7 @@
           <text value="Mostrar Paquetes"/>
         </properties>
       </component>
-      <component id="f5ea9" class="javax.swing.JButton" binding="eliminarUnPaqueteButton" default-binding="true">
+      <component id="f5ea9" class="javax.swing.JButton" binding="eliminarPaqueteBtn">
         <constraints>
           <grid row="6" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

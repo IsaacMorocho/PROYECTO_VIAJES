@@ -35,7 +35,7 @@ public class MostrarUsuario {
             tableModel.addColumn("Contraseña");
             tablaUsuarios.setModel(tableModel);
 
-            // Obtener los datos desde MongoDB y agregarlos al modelo de la tabla
+            //Obtener los datos desde MongoDB y agregarlos al modelo de la tabla
             MongoCursor<Document> cursor = collection.find().iterator();
             while (cursor.hasNext()) {
                 Document doc = cursor.next();
@@ -54,8 +54,7 @@ public class MostrarUsuario {
         }
     }
     private void EditarUsuario() {
-        JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(MostrarUsuarioP);
-        frameActual.dispose();
+        SwingUtilities.getWindowAncestor(MostrarUsuarioP).dispose();
         JFrame frameAdmin = new JFrame("Actualizar Usuarios");
         ActualizarUsuario actualizarUsuario = new ActualizarUsuario();
         frameAdmin.setContentPane(actualizarUsuario.ActualizarUsuarioP);
@@ -65,8 +64,7 @@ public class MostrarUsuario {
         frameAdmin.setVisible(true);
     }
     private void Regresar() {
-        JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(MostrarUsuarioP);
-        frameActual.dispose();
+        SwingUtilities.getWindowAncestor(MostrarUsuarioP).dispose();
         JFrame frameAdmin = new JFrame("Panel Administrador");
         PanelAdmin panelAdmin = new PanelAdmin();
         frameAdmin.setContentPane(panelAdmin.AdminCrud);

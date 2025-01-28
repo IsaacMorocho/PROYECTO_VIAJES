@@ -37,7 +37,7 @@
           <text value="Contraseña"/>
         </properties>
       </component>
-      <component id="7048b" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="7048b" class="javax.swing.JTextField" binding="NombreCuentaTxt">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -45,7 +45,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="e1b0" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="e1b0" class="javax.swing.JTextField" binding="CorreoCuentaTxt">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -69,7 +69,7 @@
           <text value="Por favor llene los siguientes campos para continuar:"/>
         </properties>
       </component>
-      <component id="4ce3e" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+      <component id="4ce3e" class="javax.swing.JPasswordField" binding="PasswCuentaTxt">
         <constraints>
           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -100,7 +100,7 @@
           <text value="Nombre de usuario:"/>
         </properties>
       </component>
-      <component id="8b1b7" class="javax.swing.JButton" binding="CREARCUENTAButton" default-binding="true">
+      <component id="8b1b7" class="javax.swing.JButton" binding="CrearCuentaBtn">
         <constraints>
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -108,7 +108,7 @@
           <text value="CREAR CUENTA"/>
         </properties>
       </component>
-      <component id="b5f22" class="javax.swing.JButton" binding="irALOGINButton" default-binding="true">
+      <component id="b5f22" class="javax.swing.JButton" binding="IrLoginBtn">
         <constraints>
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -116,7 +116,7 @@
           <text value="Ir a LOGIN"/>
         </properties>
       </component>
-      <component id="9cede" class="javax.swing.JCheckBox" binding="verContraseñaCheckBox" default-binding="true">
+      <component id="9cede" class="javax.swing.JCheckBox" binding="VerContraTxt">
         <constraints>
           <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

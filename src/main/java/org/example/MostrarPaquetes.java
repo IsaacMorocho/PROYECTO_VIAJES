@@ -81,8 +81,7 @@ public class MostrarPaquetes {
     }
 
     private void Regresar() {
-        JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(MostrarPaqueteP);
-        frameActual.dispose();
+        SwingUtilities.getWindowAncestor(MostrarPaqueteP).dispose();
         JFrame frameAdmin = new JFrame("Panel Administrador");
         PanelAdmin panelAdmin = new PanelAdmin();
         frameAdmin.setContentPane(panelAdmin.AdminCrud);

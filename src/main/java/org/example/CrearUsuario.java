@@ -3,6 +3,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -49,15 +50,14 @@ public class CrearUsuario {
             });
 
         Cancelarbtn.addActionListener(e -> {
-            JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(CrearUsuarioP);
-            frameActual.dispose();
-            JFrame frameAdmin = new JFrame("Panel Administrador");
-            PanelAdmin panelAdmin = new PanelAdmin();
-            frameAdmin.setContentPane(panelAdmin.AdminCrud);
-            frameAdmin.setLocationRelativeTo(null);
-            frameAdmin.setSize(800, 600);
-            frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frameAdmin.setVisible(true);
+            SwingUtilities.getWindowAncestor(CrearUsuarioP).dispose();
+            JFrame frame = new JFrame("Panel Administrador");
+            frame.setContentPane(new PanelAdmin().AdminCrud);
+            frame.setPreferredSize(new Dimension(1500, 750));
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setVisible(true);
         });
 
 

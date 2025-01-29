@@ -4,6 +4,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import javax.swing.*;
+import java.awt.*;
 
 public class LoginAdministrador {
     public JPanel loginA;
@@ -53,18 +54,18 @@ public class LoginAdministrador {
     private void abrirPanelAdministrador() {
         JFrame frame = new JFrame("Panel Administrador");
         frame.setContentPane(new PanelAdmin().AdminCrud);
+        frame.setPreferredSize(new Dimension(1500, 750));
+        frame.pack();
         frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
     private void regresarInterfazRoles() {
         SwingUtilities.getWindowAncestor(loginA).dispose();
-        JFrame frame = new JFrame("Roles interfaz");
+        JFrame frame = new JFrame("TRAVELBUDDY");
         frame.setContentPane(new Roles().RolesP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }

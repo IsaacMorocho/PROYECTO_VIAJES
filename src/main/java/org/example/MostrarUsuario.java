@@ -6,6 +6,7 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.util.Vector;
 
 public class MostrarUsuario {
@@ -55,22 +56,24 @@ public class MostrarUsuario {
     }
     private void EditarUsuario() {
         SwingUtilities.getWindowAncestor(MostrarUsuarioP).dispose();
-        JFrame frameAdmin = new JFrame("Actualizar Usuarios");
-        ActualizarUsuario actualizarUsuario = new ActualizarUsuario();
-        frameAdmin.setContentPane(actualizarUsuario.ActualizarUsuarioP);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
+        JFrame frame = new JFrame("Actualizar Usuarios");
+        frame.setContentPane(new ActualizarUsuario().ActualizarUsuarioP);
+        frame.setPreferredSize(new Dimension(800, 600));
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
     }
     private void Regresar() {
         SwingUtilities.getWindowAncestor(MostrarUsuarioP).dispose();
-        JFrame frameAdmin = new JFrame("Panel Administrador");
-        PanelAdmin panelAdmin = new PanelAdmin();
-        frameAdmin.setContentPane(panelAdmin.AdminCrud);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
+        JFrame frame = new JFrame("Panel Administrador");
+        frame.setContentPane(new PanelAdmin().AdminCrud);
+        frame.setPreferredSize(new Dimension(1500, 750));
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
     }
 }

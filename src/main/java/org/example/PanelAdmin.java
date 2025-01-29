@@ -33,10 +33,9 @@ public class PanelAdmin {
     private void CREAR(){
         JFrame frame = new JFrame("Crear Usuarios");
         frame.setContentPane(new CrearUsuario().CrearUsuarioP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setPreferredSize(new Dimension(800, 600));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -45,10 +44,9 @@ public class PanelAdmin {
     private void ACTUALIZAR(){
         JFrame frame = new JFrame("Actualizar Usuarios");
         frame.setContentPane(new ActualizarUsuario().ActualizarUsuarioP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setPreferredSize(new Dimension(800, 600));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -56,10 +54,9 @@ public class PanelAdmin {
     private void MOSTRAR(){
         JFrame frame = new JFrame("Mostrar Usuarios");
         frame.setContentPane(new MostrarUsuario().MostrarUsuarioP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setPreferredSize(new Dimension(1000, 600));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -67,10 +64,9 @@ public class PanelAdmin {
     private void ELIMINAR(){
         JFrame frame = new JFrame("Eliminar Usuarios");
         frame.setContentPane(new EliminarUsuario().EliminarUsuarioP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setPreferredSize(new Dimension(990, 750));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -80,10 +76,9 @@ public class PanelAdmin {
     private void CREARP(){
         JFrame frame = new JFrame("Crear Paquetes");
         frame.setContentPane(new CrearPaquetes().CrearPaqueteP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setPreferredSize(new Dimension(800, 600));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -92,10 +87,9 @@ public class PanelAdmin {
     private void ACTUALIZARP(){
         JFrame frame = new JFrame("Actualizar Paquetes");
         frame.setContentPane(new ActualizarPaquetes().ActualizarPaqueteP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setPreferredSize(new Dimension(800, 600));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -103,10 +97,9 @@ public class PanelAdmin {
     private void MOSTRARP(){
         JFrame frame = new JFrame("Mostrar Paquetes");
         frame.setContentPane(new MostrarPaquetes().MostrarPaqueteP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setPreferredSize(new Dimension(1400, 500));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
@@ -114,23 +107,19 @@ public class PanelAdmin {
     private void ELIMINARP(){
         JFrame frame = new JFrame("Eliminar Paquetes");
         frame.setContentPane(new EliminarPaquetes().EliminarPaqueteP);
-        frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setPreferredSize(new Dimension(1500, 700));
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         SwingUtilities.getWindowAncestor(AdminCrud).dispose();
     }
     private void CERRAR(){
-        JFrame frameActual = (JFrame) SwingUtilities.getWindowAncestor(AdminCrud);
-        frameActual.dispose();
-        JFrame frameAdmin = new JFrame("ROLES");
-        Roles roles = new Roles();
-        frameAdmin.setContentPane(roles.RolesP);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
+        SwingUtilities.getWindowAncestor(AdminCrud).dispose();
+        JFrame frame = new JFrame("TRAVELBUDDY");
+        frame.setContentPane(new Roles().RolesP);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }

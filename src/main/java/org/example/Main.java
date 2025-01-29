@@ -8,8 +8,7 @@ public class Main {
         JFrame frame = new JFrame("TRAVELBUDDY");
         ConexionMongo.getDatabase();
         frame.setContentPane(new Roles().RolesP);
-        frame.setSize(800, 600);
-        frame.setLocationRelativeTo(null);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 

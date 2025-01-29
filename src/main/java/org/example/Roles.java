@@ -33,26 +33,32 @@ public class Roles {
             case "Administrador":
                 JFrame frame = new JFrame("Administrador");
                 frame.setContentPane(new LoginAdministrador().loginA);
-                frame.setLocationRelativeTo(null);
-                frame.setSize(800, 600);
-                frame.setPreferredSize(new Dimension(800, 600));
+                frame.setSize(850, 1900);
+                frame.setPreferredSize(new Dimension(1080, 580));
                 frame.pack();
+                frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setVisible(true);
                 break;
             case "Cliente":
                 JFrame frame2 = new JFrame("Cliente");
                 frame2.setContentPane(new LoginCliente().LoginC);
-                frame2.setLocationRelativeTo(null);
                 frame2.setSize(800, 600);
                 frame2.setPreferredSize(new Dimension(800, 600));
                 frame2.pack();
+                frame2.setLocationRelativeTo(null);
                 frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame2.setVisible(true);
                 break;
             case "Invitado":
-                JOptionPane.showMessageDialog(null, "Login de invitado no implementado aún.");
-                break;
+                JFrame frame3 = new JFrame("Invitado");
+                frame3.setContentPane(new MenuInvitado().MenuInvitadoP);
+                frame3.setLocationRelativeTo(null);
+                frame3.setSize(1920, 1080);
+                frame3.setPreferredSize(new Dimension(1920, 1080));
+                frame3.pack();
+                frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame3.setVisible(true);                break;
             default:
               JOptionPane.showMessageDialog(null, "Rol desconocido.");
         }

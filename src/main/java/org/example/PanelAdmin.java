@@ -76,7 +76,7 @@ public class PanelAdmin {
     private void CREARP(){
         JFrame frame = new JFrame("Crear Paquetes");
         frame.setContentPane(new CrearPaquetes().CrearPaqueteP);
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setPreferredSize(new Dimension(1200, 500));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,7 +87,7 @@ public class PanelAdmin {
     private void ACTUALIZARP(){
         JFrame frame = new JFrame("Actualizar Paquetes");
         frame.setContentPane(new ActualizarPaquetes().ActualizarPaqueteP);
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setPreferredSize(new Dimension(1200, 500));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -97,7 +97,7 @@ public class PanelAdmin {
     private void MOSTRARP(){
         JFrame frame = new JFrame("Mostrar Paquetes");
         frame.setContentPane(new MostrarPaquetes().MostrarPaqueteP);
-        frame.setPreferredSize(new Dimension(1400, 500));
+        frame.setPreferredSize(new Dimension(1200, 600));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -107,7 +107,7 @@ public class PanelAdmin {
     private void ELIMINARP(){
         JFrame frame = new JFrame("Eliminar Paquetes");
         frame.setContentPane(new EliminarPaquetes().EliminarPaqueteP);
-        frame.setPreferredSize(new Dimension(1500, 700));
+        frame.setPreferredSize(new Dimension(1200, 750));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -4,6 +4,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -74,12 +75,13 @@ public class CuentasClientes {
     }
     private void REGRESAR(){
         SwingUtilities.getWindowAncestor(CuentasP).dispose();
-        JFrame frameAdmin = new JFrame("Login Cliente");
-        LoginCliente loginCliente = new LoginCliente();
-        frameAdmin.setContentPane(loginCliente.LoginC);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
+        JFrame frame2 = new JFrame("Cliente");
+        frame2.setContentPane(new LoginCliente().LoginC);
+        frame2.setSize(800, 600);
+        frame2.setPreferredSize(new Dimension(800, 600));
+        frame2.pack();
+        frame2.setLocationRelativeTo(null);
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setVisible(true);
     }
 }

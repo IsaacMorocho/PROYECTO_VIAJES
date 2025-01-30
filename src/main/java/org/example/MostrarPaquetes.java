@@ -6,6 +6,7 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.util.Vector;
 public class MostrarPaquetes {
     public JPanel MostrarPaqueteP;
@@ -74,20 +75,21 @@ public class MostrarPaquetes {
         JFrame frameEditar = new JFrame("Editar Paquetes");
         ActualizarPaquetes actualizarPaquete = new ActualizarPaquetes();
         frameEditar.setContentPane(actualizarPaquete.ActualizarPaqueteP);
+        frameEditar.setSize(1200, 500);
+        frameActual.pack();
         frameEditar.setLocationRelativeTo(null);
-        frameEditar.setSize(800, 600);
         frameEditar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameEditar.setVisible(true);
     }
 
     private void Regresar() {
         SwingUtilities.getWindowAncestor(MostrarPaqueteP).dispose();
-        JFrame frameAdmin = new JFrame("Panel Administrador");
-        PanelAdmin panelAdmin = new PanelAdmin();
-        frameAdmin.setContentPane(panelAdmin.AdminCrud);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
+        JFrame frame = new JFrame("Panel Administrador");
+        frame.setContentPane(new PanelAdmin().AdminCrud);
+        frame.setPreferredSize(new Dimension(1500, 750));
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }

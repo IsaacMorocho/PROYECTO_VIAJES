@@ -5,6 +5,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class LoginCliente {
     public JPanel LoginC;
@@ -62,29 +63,29 @@ public class LoginCliente {
         JFrame frame = new JFrame("Menu Cliente");
         MenuCliente menuCliente = new MenuCliente(correo);
         frame.setContentPane(menuCliente.MenuClienteP);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setLocationRelativeTo(null);
-        frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-    private void REGRESAR(){
-        SwingUtilities.getWindowAncestor(LoginC).dispose();
-        JFrame frameAdmin = new JFrame("Login Cliente");
-        Roles roles = new Roles();
-        frameAdmin.setContentPane(roles.RolesP);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
-    }
+
     private void REGISTRACION() {
         JFrame frameAdmin = new JFrame("Crear Cuenta Cliente ");
         CuentasClientes cuentasClientes = new CuentasClientes();
         frameAdmin.setContentPane(cuentasClientes.CuentasP);
+        frameAdmin.setPreferredSize(new Dimension(800, 600));
+        frameAdmin.pack();
         frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameAdmin.setVisible(true);
         SwingUtilities.getWindowAncestor(LoginC).dispose();
+    }
+    private void REGRESAR(){
+        SwingUtilities.getWindowAncestor(LoginC).dispose();
+        JFrame frame = new JFrame("TRAVELBUDDY");
+        frame.setContentPane(new Roles().RolesP);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }

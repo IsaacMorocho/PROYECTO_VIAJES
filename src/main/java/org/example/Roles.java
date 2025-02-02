@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.Administrador.LoginAdministrador;
+import org.example.Cliente.LoginCliente;
+import org.example.Invitado.MenuInvitado;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -51,7 +55,7 @@ public class Roles {
                 frame2.setVisible(true);
                 break;
             case "Invitado":
-                JFrame frame3 = new JFrame("Menu Invitado");
+                JFrame frame3 = new JFrame("Invitado");
                 MenuInvitado menuInvitado = new MenuInvitado();
                 frame3.setContentPane(menuInvitado.MenuInvitadoP);
                 frame3.setExtendedState(JFrame.MAXIMIZED_BOTH);

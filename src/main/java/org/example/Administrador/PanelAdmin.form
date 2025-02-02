@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.Administrador.PanelAdmin">
+  <grid id="27dc6" binding="AdminCrud" layout-manager="GridLayoutManager" row-count="16" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1402" height="548"/>
+    </constraints>
+    <properties>
+      <background color="-13613465"/>
+      <font name="JetBrains Mono SemiBold" size="12" style="1"/>
+      <foreground color="-2894893"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="6e599" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bell MT" size="36" style="1"/>
+          <foreground color="-2578"/>
+          <text value="Bienvenido Administrador"/>
+        </properties>
+      </component>
+      <vspacer id="25558">
+        <constraints>
+          <grid row="12" column="1" row-span="3" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="1a46f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono SemiBold" size="18" style="3"/>
+          <foreground color="-2894893"/>
+          <text value="¿Que desea hacer?"/>
+        </properties>
+      </component>
+      <component id="79853" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono SemiBold" size="18" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Gestion de Clientes:"/>
+        </properties>
+      </component>
+      <component id="2e912" class="javax.swing.JButton" binding="crearUsuariosbtn">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Crear Usuarios"/>
+        </properties>
+      </component>
+      <component id="83453" class="javax.swing.JButton" binding="mostrarUsuariosBtn">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Mostrar Usuarios"/>
+        </properties>
+      </component>
+      <component id="7c508" class="javax.swing.JButton" binding="eliminarUsuariosBtn">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Eliminar Usuarios"/>
+        </properties>
+      </component>
+      <component id="20157" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="294" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono SemiBold" size="18" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Gestion de Paquetes de turismo:"/>
+        </properties>
+      </component>
+      <component id="c0dbc" class="javax.swing.JButton" binding="crearUnNuevoPaqueteButton" default-binding="true">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Crear un nuevo Paquete"/>
+        </properties>
+      </component>
+      <component id="7c3fc" class="javax.swing.JButton" binding="actualizarDatosDeUnButton" default-binding="true">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Actualizar datos de un Paquete"/>
+        </properties>
+      </component>
+      <component id="76093" class="javax.swing.JButton" binding="mostrarPaquetesButton" default-binding="true">
+        <constraints>
+          <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Mostrar Paquetes"/>
+        </properties>
+      </component>
+      <component id="f5ea9" class="javax.swing.JButton" binding="eliminarPaqueteBtn">
+        <constraints>
+          <grid row="11" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Eliminar un Paquete"/>
+        </properties>
+      </component>
+      <vspacer id="39d74">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="f22d3">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="a83c4">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="516ce">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="4162d" class="javax.swing.JButton" binding="actualizarUsuariobtn">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13750465"/>
+          <borderPainted value="false"/>
+          <font name="JetBrains Mono SemiBold" size="17" style="1"/>
+          <foreground color="-2894893"/>
+          <text value="Actualizar informacion de Usuarios"/>
+        </properties>
+      </component>
+      <hspacer id="f8427">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="2a5c6">
+        <constraints>
+          <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="d87d9" class="javax.swing.JButton" binding="cerrasSesionBtn">
+        <constraints>
+          <grid row="15" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-3243131"/>
+          <font size="15" style="1"/>
+          <text value="CERRAR SESION"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

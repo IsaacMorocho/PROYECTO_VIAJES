@@ -12,9 +12,9 @@ public class MenuInvitado {
     private JButton regresarBtn;
 
     public MenuInvitado() {
-        quitoIMG.setIcon(cargarImagenAbsoluta("C:\\Users\\USER\\Documents\\POO\\PROYECTOS POO\\PROYECTO_VIAJES\\src\\imagenes\\quito.jpg", 200, 150));
-        galapagosIMG.setIcon(cargarImagenAbsoluta("C:\\Users\\USER\\Documents\\POO\\PROYECTOS POO\\PROYECTO_VIAJES\\src\\imagenes\\galapagos.jpg", 200, 150));
-        cuencaIMG.setIcon(cargarImagenAbsoluta("C:\\Users\\USER\\Documents\\POO\\PROYECTOS POO\\PROYECTO_VIAJES\\src\\imagenes\\cuenca.jpg", 200, 150));
+        quitoIMG.setIcon(cargarImagenAbsoluta("C:\\Users\\USER\\Documents\\POO\\PROYECTOS POO\\PROYECTO_VIAJES\\src\\imagenes\\quito.jpg", 490, 360));
+        galapagosIMG.setIcon(cargarImagenAbsoluta("C:\\Users\\USER\\Documents\\POO\\PROYECTOS POO\\PROYECTO_VIAJES\\src\\imagenes\\galapagos.jpg", 490, 360));
+        cuencaIMG.setIcon(cargarImagenAbsoluta("C:\\Users\\USER\\Documents\\POO\\PROYECTOS POO\\PROYECTO_VIAJES\\src\\imagenes\\cuenca.jpg", 490, 360));
 
         verListaDePaquetesButton.addActionListener(e -> PaquetesInvitados());
         regresarBtn.addActionListener(e -> CERRAR());
@@ -29,21 +29,20 @@ public class MenuInvitado {
     private void PaquetesInvitados() {
         SwingUtilities.getWindowAncestor(MenuInvitadoP).dispose();
         JFrame frameEditar = new JFrame("Mostrar Paquetes");
-        MostrarPaquetesInvitado mostrarPaquetesCliente = new MostrarPaquetesInvitado();
-        frameEditar.setContentPane(mostrarPaquetesCliente.MostrarPaquetesInvP);
+        MostrarPaquetesInvitado mostrarPaquetesInvitado= new MostrarPaquetesInvitado();
+        frameEditar.setContentPane(mostrarPaquetesInvitado.MostrarPaquetesInvP);
+        frameEditar.setPreferredSize(new Dimension(1200,700));
+        frameEditar.pack();
         frameEditar.setLocationRelativeTo(null);
-        frameEditar.setSize(800, 600);
         frameEditar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameEditar.setVisible(true);
     }
     private void CERRAR() {
         SwingUtilities.getWindowAncestor(MenuInvitadoP).dispose();
-        JFrame frameAdmin = new JFrame("ROLES");
-        Roles roles=new Roles();
-        frameAdmin.setContentPane(roles.RolesP);
-        frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
-        frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameAdmin.setVisible(true);
+        JFrame frame = new JFrame("TRAVELBUDDY");
+        frame.setContentPane(new Roles().RolesP);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }

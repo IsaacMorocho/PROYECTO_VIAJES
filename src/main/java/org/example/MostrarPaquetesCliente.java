@@ -6,6 +6,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.util.Vector;
 
 public class MostrarPaquetesCliente {
@@ -111,8 +112,9 @@ public class MostrarPaquetesCliente {
         JFrame frameDetalles = new JFrame("Detalles de Compra");
         DetallesCompra detallesCompra = new DetallesCompra(idPaquete,correo);
         frameDetalles.setContentPane(detallesCompra.DetallesCompraP);
+        frameDetalles.setPreferredSize(new Dimension(1200,500));
+        frameDetalles.pack();
         frameDetalles.setLocationRelativeTo(null);
-        frameDetalles.setSize(800, 600);
         frameDetalles.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameDetalles.setVisible(true);
     }
@@ -121,8 +123,8 @@ public class MostrarPaquetesCliente {
         JFrame frameAdmin = new JFrame("Menu Cliente");
         MenuCliente menuCliente = new MenuCliente(correo);
         frameAdmin.setContentPane(menuCliente.MenuClienteP);
+        frameAdmin.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameAdmin.setVisible(true);
     }

@@ -37,8 +37,9 @@ public class MenuCliente {
         JFrame frameEditar = new JFrame("Mostrar Paquetes");
         MostrarPaquetesCliente mostrarPaquetesCliente = new MostrarPaquetesCliente(correo);
         frameEditar.setContentPane(mostrarPaquetesCliente.MostrarPaqueteP);
+        frameEditar.setPreferredSize(new Dimension(1200,700));
+        frameEditar.pack();
         frameEditar.setLocationRelativeTo(null);
-        frameEditar.setSize(800, 600);
         frameEditar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameEditar.setVisible(true);
     }
@@ -47,8 +48,8 @@ public class MenuCliente {
         JFrame frameAdmin = new JFrame("ROLES");
         Roles roles=new Roles();
         frameAdmin.setContentPane(roles.RolesP);
+        frameAdmin.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameAdmin.setVisible(true);
     }

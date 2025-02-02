@@ -51,14 +51,14 @@ public class Roles {
                 frame2.setVisible(true);
                 break;
             case "Invitado":
-                JFrame frame3 = new JFrame("Invitado");
-                frame3.setContentPane(new MenuInvitado().MenuInvitadoP);
+                JFrame frame3 = new JFrame("Menu Invitado");
+                MenuInvitado menuInvitado = new MenuInvitado();
+                frame3.setContentPane(menuInvitado.MenuInvitadoP);
+                frame3.setExtendedState(JFrame.MAXIMIZED_BOTH);
                 frame3.setLocationRelativeTo(null);
-                frame3.setSize(1920, 1080);
-                frame3.setPreferredSize(new Dimension(1920, 1080));
-                frame3.pack();
                 frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame3.setVisible(true);                break;
+                frame3.setVisible(true);
+                break;
             default:
               JOptionPane.showMessageDialog(null, "Rol desconocido.");
         }

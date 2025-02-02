@@ -5,6 +5,8 @@ import javax.swing.table.DefaultTableModel;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+
+import java.awt.*;
 import java.util.Vector;
 import org.bson.Document;
 
@@ -71,13 +73,14 @@ public class MostrarPaquetesInvitado {
         }
     }
     private void AtrasRegistro(){
+        SwingUtilities.getWindowAncestor(MostrarPaquetesInvP).dispose();
         JFrame frameAdmin = new JFrame("Crear Cuenta Cliente ");
         CuentasClientes cuentasClientes = new CuentasClientes();
         frameAdmin.setContentPane(cuentasClientes.CuentasP);
+        frameAdmin.setPreferredSize(new Dimension(800, 600));
+        frameAdmin.pack();
         frameAdmin.setLocationRelativeTo(null);
-        frameAdmin.setSize(800, 600);
         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameAdmin.setVisible(true);
-        SwingUtilities.getWindowAncestor(MostrarPaquetesInvP).dispose();
     }
 }

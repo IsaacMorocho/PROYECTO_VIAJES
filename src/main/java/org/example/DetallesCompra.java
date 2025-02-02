@@ -8,6 +8,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Vector;
@@ -18,6 +19,7 @@ public class DetallesCompra {
     private JScrollPane scrollPane;
     private JLabel costoTotal;
     private JButton FacturaBtn;
+    private JButton cancelarBtn;
     private String correoCliente;
 
     public DetallesCompra(String idPaquete, String correoCliente) {
@@ -43,6 +45,7 @@ public class DetallesCompra {
         cargarPaquete(idPaquete, tableModel);
         //Boton factura con el metodo generar y su variable de entrada IDpaquete
         FacturaBtn.addActionListener(e -> generarFactura(idPaquete));
+        cancelarBtn.addActionListener(e -> CANCELAR());
     }
 
     private void cargarPaquete(String idPaquete, DefaultTableModel tableModel) {
@@ -126,7 +129,16 @@ public class DetallesCompra {
                 e.printStackTrace();
             }
         }
-
-
+    }
+    private void CANCELAR(){
+        SwingUtilities.getWindowAncestor(DetallesCompraP).dispose();
+        JFrame frameEditar = new JFrame("Mostrar Paquetes");
+        MostrarPaquetesCliente mostrarPaquetesCliente = new MostrarPaquetesCliente(correoCliente);
+        frameEditar.setContentPane(mostrarPaquetesCliente.MostrarPaqueteP);
+        frameEditar.setPreferredSize(new Dimension(1200,700));
+        frameEditar.pack();
+        frameEditar.setLocationRelativeTo(null);
+        frameEditar.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameEditar.setVisible(true);
     }
 }
